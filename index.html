@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relay Controller</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <div id="homeScreen" class="screen"> <header>
+            <h1>Relay Controller</h1>
+            <button id="settingsButton" class="header-button">⚙️</button>  <!-- Settings Button -->
+        </header>
+        <div class="button-grid">
+            <button id="openButton" class="control-button">Open</button>
+            <button id="closeButton" class="control-button">Close</button>
+        </div>
+    </div>
+
+    <div id="settingsScreen" class="screen" style="display: none;">  <!-- Settings Screen - initially hidden -->
+        <header>
+            <a href="#" id="backToHome" class="back-button">< Home</a>  <!-- Back to Home -->
+            <h1>Settings</h1>
+        </header>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="openSmsCode">Open SMS Code</label>
+                <input type="text" id="openSmsCode" name="openSmsCode" placeholder="e.g., 1234GON##">
+            </div>
+            <div class="form-group">
+                <label for="closeSmsCode">Close SMS Code</label>
+                <input type="text" id="closeSmsCode" name="closeSmsCode" placeholder="e.g., 1234GOFF##">
+            </div>
+            <button id="saveSettingsButton" class="save-button">Save Settings</button>
+        </div>
+    </div>
+
+    <div id="addSiteScreen" class="screen" style="display: none;">  <!-- Add Site Screen - initially hidden -->
+        <header>
+            <a href="#" id="backToHomeFromAddSite" class="back-button">< Home</a>  <!-- Back to Home -->
+            <h1>Add New Site</h1>
+        </header>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="siteName">Site Name <span class="info-icon">ⓘ</span></label>
+                <input type="text" id="siteName" name="siteName" placeholder="Enter Site Name">
+            </div>
+            <div class="form-group">
+                <label for="unitTelephoneNumber">Unit Telephone Number <span class="info-icon">ⓘ</span></label>
+                <input type="tel" id="unitTelephoneNumber" name="unitTelephoneNumber" placeholder="Enter Unit Telephone Number">
+            </div>
+            <button id="saveSiteButton" class="save-button">Save</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>
